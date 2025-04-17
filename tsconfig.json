@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "types": [
+      "node"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@frontend/*": [
+        "./src/frontend/*"
+      ],
+      "@frontend": [
+        "./src/frontend/index.ts"
+      ],
+      "@config-runtime/*": [
+        "./src/backend/config/runtime/*"
+      ],
+      "@config-runtime": [
+        "./src/backend/config/runtime/index.ts"
+      ],
+      "@logger/*": [
+        "./src/backend/logger/*"
+      ],
+      "@logger": [
+        "./src/backend/logger/index.ts"
+      ],
+      "@backend/*": [
+        "./src/backend/*"
+      ],
+      "@backend": [
+        "./src/backend/index.ts"
+      ],
+      "@config/*": [
+        "./src/backend/config/*"
+      ],
+      "@config": [
+        "./src/backend/config/index.ts"
+      ],
+      "@routes/*": [
+        "./src/backend/routes/*"
+      ],
+      "@routes": [
+        "./src/backend/routes/index.ts"
+      ]
+    }
+  }
+}
