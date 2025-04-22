@@ -1,0 +1,85 @@
+.game-table-container {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  text-align: center;
+  h1 {
+    color: white;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+}
+
+.game-table-header {
+  color: white;
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.game-table-content {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.btn-action {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.winner-inner {
+  animation: zoomIn 3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winnerContainer {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  animation: fadeIn 3s ease-in-out;
+
+  h2 {
+    font-size: 7rem;
+    margin: 0;
+  }
+
+  ol > li {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+}

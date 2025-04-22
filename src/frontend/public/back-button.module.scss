@@ -1,0 +1,20 @@
+.back-button {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity, transform 0.3s ease;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+.back-button:hover {
+  opacity: 1;
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}

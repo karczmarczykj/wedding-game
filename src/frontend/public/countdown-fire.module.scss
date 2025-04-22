@@ -1,0 +1,25 @@
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+.countdown {
+  position: fixed;
+  top: calc(50% - 3rem);
+  left: calc(50% - 4rem);
+  color: white;
+  font-size: 5rem;
+
+  display: inline-block;
+  animation: pulse 1s ease-in-out infinite;
+}

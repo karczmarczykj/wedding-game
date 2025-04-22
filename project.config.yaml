@@ -17,6 +17,3 @@ services:
   - name: public
     serviceType: frontend
     subdomain: public
-  - name: user
-    serviceType: frontend
-    subdomain: user
