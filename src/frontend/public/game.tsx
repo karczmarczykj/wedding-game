@@ -163,9 +163,17 @@ function updateGameState(gameState: GameState, padsState: PadsState) : GameState
   return {...gameState};
 }
 
-function findWinner(gameState: GameState) : string[] {
+function findWinner(gameState: GameState, websocket: WebSocket) : string[] {
   const participants = Object.values(gameState.participants);
   const maxPoints = Math.max(...participants.map(p => p.points));
+  const winnerToLight = new Set<number>();
+  Object.keys(gameState.participants).forEach((key) => {
+    if (gameState.participants[key].points === maxPoints) {
+      winnerToLight.add(parseInt(key));
+    }
+  });
+  lightPads(websocket, winnerToLight);
+
   return participants.filter(p => p.points === maxPoints).map(p => `${p.name} ${p.points} pt.`);
 }
 
@@ -233,7 +241,9 @@ const Game : React.FC<GameProps> = ({participantsIcons, BallIcon, isFreeze, fini
     }
 
     if (secondsLeft <= 0) {
-      const winner = findWinner(gameState);
+      if (!socketRef.current)
+        return;
+      const winner = findWinner(gameState, socketRef.current);
       finishGame(winner);
       return;
     }

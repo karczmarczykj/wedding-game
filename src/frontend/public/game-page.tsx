@@ -11,27 +11,39 @@ interface GameProps {
 }
 
 const malePlayers : Record<string, string> =  {
-  0: 'Jarek',
-  1: 'Darek',
-  2: 'Krzysiek',
-  3: 'Zbyszek',
-  4: 'Wojtek',
-  5: 'Grzesiek',
-  6: 'Michał',
-  7: 'Kuba',
-  8: 'Marek',
+  0:"Maksym",
+  1:"Jakub",
+  2:"Dominik",
+  3:"Mateusz",
+  4:"Witold",
+  5:"Janusz",
+  6:"Wojciech",
+  7:"Zbigniew",
+  8:"Grzegorz",
+  9:"Wiktor",
+  10:"Michał",
+  11:"Daniel",
+  12:"Piotr",
+  13:"Marcin"
 }
 
 const femalePlayers : Record<string, string> = {
-  0: 'Magda',
-  1: 'Marta',
-  2: 'Martyna',
-  3: 'Ania',
-  4: 'Kasia',
-  5: 'Weronika',
-  6: 'Asia',
-  7: 'Klaudia',
-  8: 'Agata',
+  0: "Malwina",
+  1: "Katarzyna",
+  2: "Iwona",
+  3: "Joanna",
+  4: "Agnieszka",
+  5: "Kinga",
+  6: "Małgorzata",
+  7: "Anna",
+  8: "Eva",
+  9: "Anna",
+  10: "Aneta",
+  11: "Hania",
+  12: "Izabela",
+  13: "Katarzyna",
+  14: "Grażyna",
+  15: "Ada"
 }
 
 const GameTable : React.FC<GameProps> = ({ variant }) => {
